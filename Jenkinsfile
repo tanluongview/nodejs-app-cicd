@@ -22,15 +22,16 @@ node {
     // }
 
     stage('Deploy'){
-      if(env.BRANCH_NAME == 'master') {
         def customImage = docker.build("my-feathers-app:${env.BUILD_ID}")
         customImage.push()
         customImage.push('latest')
-        // sh 'docker build -t my-feathers-app --no-cache .'
-        // sh 'docker tag my-feathers-app localhost:5000/my-feathers-app'
-        // sh 'docker push localhost:5000/my-feathers-app'
-        // sh 'docker rmi -f my-feathers-app localhost:5000/my-feathers-app'
-      }
+
+    //   if(env.BRANCH_NAME == 'master') {
+    //     sh 'docker build -t my-feathers-app --no-cache .'
+    //     sh 'docker tag my-feathers-app localhost:5000/my-feathers-app'
+    //     sh 'docker push localhost:5000/my-feathers-app'
+    //     sh 'docker rmi -f my-feathers-app localhost:5000/my-feathers-app'
+    //   }
     }
   }
   catch (err) {
