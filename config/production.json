@@ -1,0 +1,4 @@
+{
+  "host": "nodejs-app-cicd-app.feathersjs.com",
+  "port": "PORT"
+}
