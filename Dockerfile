@@ -9,5 +9,4 @@ ENV NODE_ENV=production
 ENV PORT=3030
 
 RUN npm install
-EXPOSE ${PORT}
 CMD npm start
