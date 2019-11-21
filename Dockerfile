@@ -6,7 +6,8 @@ WORKDIR /app
 COPY . /app
 
 ENV NODE_ENV=production
+ENV PORT=3030
 
 RUN npm install
-EXPOSE 3030
+EXPOSE ${PORT}
 CMD npm start
