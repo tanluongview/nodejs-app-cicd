@@ -9,6 +9,7 @@ exports.Messages = class Messages {
   }
 
   async get (id, params) {
+    console.log('abc');
     return {
       id, text: `A new message with ID: ${id}!`
     };
